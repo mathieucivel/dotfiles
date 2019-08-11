@@ -1,21 +1,19 @@
-# My Dotfiles
+# Dotfiles
 
+Shared config across linux, macOS, and android (termux) environments.
 Managed by a bare git repository.
+`master` branch is for common config shared across environments.
+`linux`, `macos`, `android` branches are environment specific.
 
-## Fist initialization
+## Installation
 
 ```bash
 git init --bare $HOME/.dotfiles
-alias dotfiles-git='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles-git='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+dotfiles-git remote add origin git@github.com:[user]/dotfiles.git #use your forked repository url
 dotfiles-git config status.showUntrackedFiles no
-```
-
-## Install in new environment
-
-```bash
-git clone --separate-git-dir=$HOME/.dotfiles [git@github.com:22]:mathieucivel/dotfiles.git $HOME/dotfiles-tmp
-cp ~/dotfiles-tmp/ ~
-rm -r ~/dotfiles-tmp/
-alias dotfiles-git='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+dotfiles-git fetch
+dotfiles-git checkout master #or linux, macos, android branches
+bash .install.sh
 ```
 
