@@ -1,8 +1,11 @@
 # Dotfiles
 
 Shared config across linux, macOS, and android (termux) environments.
+
 Managed by a bare git repository.
+
 `master` branch is for common config shared across environments.
+
 `linux`, `macos`, `android` branches are environment specific.
 
 ## Installation
@@ -17,3 +20,10 @@ dotfiles-git checkout master #or linux, macos, android branches
 bash .install.sh
 ```
 
+Create and edit a file `.gitconfig-identity` with the following template:
+
+```
+[user]
+    email = "..."
+    name = "..."
+```
