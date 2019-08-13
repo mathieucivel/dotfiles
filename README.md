@@ -14,7 +14,6 @@ Managed by a bare git repository.
 git init --bare $HOME/.dotfiles
 alias dotfiles-git='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfiles-git remote add origin git@github.com:[user]/dotfiles.git #use your forked repository url
-dotfiles-git config status.showUntrackedFiles no
 dotfiles-git fetch
 dotfiles-git checkout master #or linux, macos, android branches
 bash .install.sh
