@@ -131,3 +131,6 @@ alias dg='dotfiles-git'
 source $(dirname $(gem which colorls))/tab_complete.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Direnv
+eval "$(direnv hook zsh)"
