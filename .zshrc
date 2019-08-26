@@ -121,8 +121,10 @@ alias lg='colorls --gs'       #git
 alias lt='colorls --tree=3'   #tree
 
 alias dotfiles-git='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dgit='dotfiles-git'
 alias dg='dotfiles-git'
 
+alias -g glog="log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
